@@ -1,5 +1,7 @@
 // keystatic.config.ts
-import { config, fields, collection } from '@keystatic/core';
+import { config, fields, collection, singleton } from '@keystatic/core';
+
+export const markdocConfig = fields.markdoc.createMarkdocConfig({});
 
 export default config({
     storage: {
@@ -15,7 +17,18 @@ export default config({
                 title: fields.slug({ name: { label: 'Title' } }),
                 // content: fields.markdoc({ label: 'Content' }),
                 describtion: fields.text({ label: 'Describtion' }),
+                content: fields.markdoc({ label: 'Content' }),
             },
         }),
     },
+    singletons: {
+        socialLinks: singleton({
+          label: 'Social Links',
+          schema: {
+            twitter: fields.text({ label: 'Twitter', description: 'Enter your Twitter handle' }),
+            github: fields.text({ label: 'Github', description: 'Enter your Github username' }),
+            linkedin: fields.text({ label: 'LinkedIn', description: 'Enter your LinkedIn username' }),
+          }
+        })
+      }
 });
