@@ -21,7 +21,7 @@ export default async function Home() {
           height={38}
           priority
         />
-
+        <h1>Hello mansur</h1>
         <div>
           <h2>Posts :</h2>
           <ul>
