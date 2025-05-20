@@ -1,0 +1,45 @@
+{
+  "menuItems": [
+    {
+      "label": "Home",
+      "link": "/",
+      "subMenu": []
+    },
+    {
+      "label": "About us",
+      "link": "/about-us",
+      "subMenu": []
+    },
+    {
+      "label": "Services",
+      "subMenu": [
+        {
+          "label": "RTL Engineering",
+          "link": "/"
+        },
+        {
+          "label": "ASIC Engineering",
+          "link": "/"
+        },
+        {
+          "label": "Physical design",
+          "link": "/"
+        },
+        {
+          "label": "Analog mixed signal design",
+          "link": "/"
+        }
+      ]
+    },
+    {
+      "label": "Blogs",
+      "link": "/blogs",
+      "subMenu": []
+    },
+    {
+      "label": "Careers",
+      "link": "/careers",
+      "subMenu": []
+    }
+  ]
+}

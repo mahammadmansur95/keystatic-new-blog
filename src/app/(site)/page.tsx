@@ -1,85 +1,60 @@
-import Image from "next/image";
+import { Col, Divider, Row } from "antd";
 import { reader } from "../reader";
-import BlogCard from "@/components/BlogCard";
 import Link from "next/link";
+import Image from "next/image";
 
 export default async function Home() {
-  const posts = await reader.collections.posts.all({
-    resolveLinkedFiles: true,
-  });
+  // const posts = await reader.collections.posts.all({
+  //   resolveLinkedFiles: true,
+  // });
 
-  console.log(posts);
+  const homepage = await reader.singletons.homepage.read();
+  console.log("homepage", homepage);
 
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+    <div className="relative h-[95vh] bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)] overflow-hidden">
+      {/* Background Image for Mobile */}
+      <div className="absolute inset-0 lg:hidden">
         <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
+          src="https://drive.google.com/uc?export=view&id=1PKcD2S1gM3oMLzZ0iwZI6E1hqYpgAlR9"
+          alt="hero image"
+          fill
+          className="object-cover opacity-30"
         />
-        <h1>Hello mansur</h1>
-        <div>
-          <h2>Posts :</h2>
-          <ul>
-            {posts?.map((post) => (
-              <li key={post?.slug}>
-                <Link href={`/blog/${post?.slug}`}>{post?.entry?.title}</Link>
-              </li>
-            ))}
-          </ul>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+      </div>
+
+      <Row className="relative z-10 h-full">
+        <Col sm={24} md={24} lg={10} xl={10}>
+          <div className="md:px-11 md:py-32 2xl:py-10 px-6 py-20 text-white h-full flex flex-col justify-center">
+            <h1 className="mb-6 leading-snug md:leading-[120%] text-2xl md:text-[40px] md:max-w-[500px] font-bold">
+              {homepage?.hero?.heading}
+            </h1>
+            <div className="w-[110px] h-[4px] bg-[#81C4E8] mb-6"></div>
+            <h2 className="text-base md:text-[20px] font-normal leading-snug mb-8 max-w-[600px]">
+              {homepage?.hero?.subheading}
+            </h2>
+            <div className="text-white px-4 py-3 bg-[#EE2C52] rounded-md text-[16px] font-normal w-fit">
+              Explore more
+            </div>
+          </div>
+        </Col>
+
+        {/* Desktop Side Image */}
+        <Col
+          sm={24}
+          md={24}
+          lg={14}
+          xl={14}
+          className="hidden lg:block relative"
         >
           <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="https://drive.google.com/uc?export=view&id=1PKcD2S1gM3oMLzZ0iwZI6E1hqYpgAlR9"
+            alt="hero image"
+            fill
+            className="object-cover"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+        </Col>
+      </Row>
     </div>
   );
 }
