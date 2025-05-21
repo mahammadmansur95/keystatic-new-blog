@@ -77,6 +77,15 @@ export default config({
             url: fields.text({ label: 'CTA Link' })
           })
         }, { label: "Hero section" }),
+        who_we_are : fields.object({
+          bg_image: fields.text({ label: "Background url" }),
+          heading : fields.text({ label: "Heading" }),
+          subHeading: fields.text({ label: "Sub heading", multiline: true }),
+          cta : fields.object({
+            text: fields.text({ label: "CTA Text" }),
+            url: fields.text({ label: 'CTA Link' })
+          })
+        }, { label: "Who are we" })
       },
     })
   },

@@ -93,7 +93,7 @@ const Header = ({ data }: any) => {
 
         {/* Desktop Contact */}
         <Col className="hidden md:block">
-          <Button type="primary" className="!bg-[#81C4E8] !text-black">
+          <Button type="primary" className="!bg-[#81C4E8] !text-black !py-5">
             Contact us
           </Button>
         </Col>

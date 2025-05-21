@@ -34,7 +34,7 @@ export default async function RootLayout({
       >
         <AntdRegistry>
           <Header data={data} />
-          <main className="pt-[60px] bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)] overflow-hidden"> {/* Adjust height based on your Header */}
+          <main className="pt-[60px] bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)]"> {/* Adjust height based on your Header */}
             {children}
           </main>
         </AntdRegistry>

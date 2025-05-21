@@ -6,5 +6,14 @@
       "text": "Explore more",
       "url": "/"
     }
+  },
+  "who_we_are": {
+    "bg_image": "https://drive.google.com/uc?export=view&id=1gI7u8o52182Xi1-hkHtdoXd6xYEuwDmf",
+    "heading": "Transform Your Business with Cutting-Edge VLSI Solutions",
+    "subHeading": "In the fast-evolving world of technology, semiconductor and VLSI design are at the heart of innovation. Our comprehensive VLSI services empower your business to stay ahead by delivering customised, high-performance solutions that enhance productivity and efficiency. From design to verification, we provide expertise in every stage of the semiconductor lifecycle, ensuring seamless integration and optimal results.",
+    "cta": {
+      "text": "Elevate Your Business Today!",
+      "url": "/"
+    }
   }
 }
