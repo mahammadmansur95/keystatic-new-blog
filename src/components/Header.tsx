@@ -27,7 +27,7 @@ const Header = ({ data }: any) => {
   };
 
   return (
-    <div className="fixed top-0 left-0 w-full z-50 bg-[#14244C] px-4 py-3 shadow-md">
+    <div className="fixed top-0 left-0 w-full z-50 bg-[#14244C] px-8 py-3 shadow-md">
       <Row align="middle" justify="space-between" wrap={false}>
         {/* Logo */}
         <Col>

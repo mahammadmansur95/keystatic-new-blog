@@ -13,14 +13,14 @@ export default async function Home() {
 
   return (
     <>
-      <div className="relative md:h-[95vh] h-[60vh] bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)] overflow-hidden">
+      <div className="relative md:h-[95vh] h-[90vh] bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)] overflow-hidden">
         {/* Background Image for Mobile */}
         <div className="absolute inset-0 lg:hidden">
           <Image
             src="https://drive.google.com/uc?export=view&id=1PKcD2S1gM3oMLzZ0iwZI6E1hqYpgAlR9"
             alt="hero image"
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
           />
         </div>
 
@@ -30,7 +30,7 @@ export default async function Home() {
               <h1 className="mb-6 leading-snug md:leading-[120%] text-2xl md:text-[40px] md:max-w-[500px] font-bold max-[500px]:text-center">
                 {homepage?.hero?.heading}
               </h1>
-              <div className="w-[110px] h-[4px] bg-[#81C4E8] mb-6 max-[500px]:mx-auto"></div>
+              <div className="w-[110px] h-[4px] bg-[#81C4E8] md:mb-6 mb-4 max-[500px]:mx-auto"></div>
               <h2 className="text-base md:text-[20px] font-normal leading-snug mb-8 max-w-[600px] max-[500px]:text-center">
                 {homepage?.hero?.subheading}
               </h2>

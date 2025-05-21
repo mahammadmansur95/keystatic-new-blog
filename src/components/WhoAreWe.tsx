@@ -4,7 +4,7 @@ import React from "react";
 const WhoAreWe = ({ data }: any) => {
   console.log("data", data);
   return (
-    <div className="relative md:h-[70vh] bg-white py-16">
+    <div className="relative md:h-[90vh] bg-white py-16">
       {/* Background image */}
       <div className="absolute inset-0">
         <Image
@@ -12,7 +12,7 @@ const WhoAreWe = ({ data }: any) => {
           src="https://drive.google.com/uc?export=view&id=1gI7u8o52182Xi1-hkHtdoXd6xYEuwDmf"
           alt="hero image"
           fill
-          className="object-cover opacity-30"
+          className="object-cover"
         />
       </div>
 
