@@ -16,7 +16,7 @@ const Services = ({ data }: any) => {
   const getCardClass = (index: number) => {
     return clsx(
       "mx-2 transition-all duration-500 ease-in-out rounded-xl shadow-lg relative h-full",
-      index === activeIndex ? " h-[400px] z-10" : " h-[350px] z-0"
+      index === activeIndex ? " !h-[400px] z-10" : " !h-[350px] z-0"
     );
   };
 
