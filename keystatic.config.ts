@@ -85,7 +85,16 @@ export default config({
             text: fields.text({ label: "CTA Text" }),
             url: fields.text({ label: 'CTA Link' })
           })
-        }, { label: "Who are we" })
+        }, { label: "Who are we" }),
+        services: fields.object({
+          heading: fields.text({ label: "Heading" }),
+          subheading: fields.text({ label: 'Subheading', multiline: true }),
+          bg_img: fields.text({label: "Background image"}),
+          services: fields.array(fields.object({
+            title: fields.text({ label: "Title" }),
+            image_url: fields.text({ label: "Image" })
+          }), { label: "Services list" })
+        }, { label: "Services" })
       },
     })
   },

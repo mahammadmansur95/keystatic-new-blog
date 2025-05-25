@@ -2,6 +2,7 @@ import { Col, Divider, Row } from "antd";
 import { reader } from "../reader";
 import Image from "next/image";
 import WhoAreWe from "@/components/WhoAreWe";
+import Services from "@/components/Services";
 
 export default async function Home() {
   // const posts = await reader.collections.posts.all({
@@ -20,7 +21,7 @@ export default async function Home() {
             src="https://drive.google.com/uc?export=view&id=1PKcD2S1gM3oMLzZ0iwZI6E1hqYpgAlR9"
             alt="hero image"
             fill
-            className="object-cover"
+            className="object-cover object-center"
           />
         </div>
 
@@ -52,12 +53,13 @@ export default async function Home() {
               src="https://drive.google.com/uc?export=view&id=1PKcD2S1gM3oMLzZ0iwZI6E1hqYpgAlR9"
               alt="hero image"
               fill
-              className="object-cover"
+              className="object-contain"
             />
           </Col>
         </Row>
       </div>
       <WhoAreWe data={homepage?.who_we_are} />
+      <Services data={homepage?.services}/>
     </>
   );
 }

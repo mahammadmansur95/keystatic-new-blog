@@ -2,7 +2,6 @@ import Image from "next/image";
 import React from "react";
 
 const WhoAreWe = ({ data }: any) => {
-  console.log("data", data);
   return (
     <div className="relative md:h-[90vh] bg-white py-16">
       {/* Background image */}

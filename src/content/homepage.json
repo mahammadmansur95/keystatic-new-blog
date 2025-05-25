@@ -15,5 +15,28 @@
       "text": "Elevate Your Business Today!",
       "url": "/"
     }
+  },
+  "services": {
+    "heading": "Innovative Services, Tailored for You",
+    "subheading": "We offer a range of specialised semiconductor and VLSI services to meet your business needs:",
+    "bg_img": "https://drive.google.com/uc?export=view&id=11d4Mq2McB4FVicVcb2E0JE3hE4dDGma5",
+    "services": [
+      {
+        "title": "RTL engineering",
+        "image_url": "https://drive.google.com/uc?export=view&id=1XXhkdP_S2Cv9KF-Y9zflL0A_1wcOyH-n"
+      },
+      {
+        "title": "ASIC verification engineering",
+        "image_url": "https://drive.google.com/uc?export=view&id=1HsY5fL6JHUQk8BUzvfOu2H8cFuEO4JdM"
+      },
+      {
+        "title": "Physical design",
+        "image_url": "https://drive.google.com/uc?export=view&id=1uv5ZRYnhLw0fde6Pko-zl_ScTBOUvPgA"
+      },
+      {
+        "title": "Analog and mixed signal design",
+        "image_url": "https://drive.google.com/uc?export=view&id=1qvsk5XV6RYpKVv7V7Olg5PDHYe3hAwe6"
+      }
+    ]
   }
 }
