@@ -4,6 +4,7 @@ import { AntdRegistry } from "@ant-design/nextjs-registry";
 import "../globals.css";
 import { reader } from "@/app/reader";
 import Header from "@/components/Header";
+import Footer from "@/components/Footer";
 
 const geistSans = localFont({
   src: "../fonts/GeistVF.woff",
@@ -37,6 +38,7 @@ export default async function RootLayout({
           <main className="pt-[60px] bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)]"> {/* Adjust height based on your Header */}
             {children}
           </main>
+          <Footer/>
         </AntdRegistry>
       </body>
     </html>
