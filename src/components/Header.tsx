@@ -6,14 +6,7 @@ import {
   MenuOutlined,
   CloseOutlined,
 } from "@ant-design/icons";
-import {
-  Button,
-  Col,
-  Drawer,
-  Dropdown,
-  Menu,
-  Row,
-} from "antd";
+import { Button, Col, Drawer, Dropdown, Menu, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
@@ -31,9 +24,11 @@ const Header = ({ data }: any) => {
       <Row align="middle" justify="space-between" wrap={false}>
         {/* Logo */}
         <Col>
-          <div className="relative w-[150px] h-[40px]">
-            <Image src="/images/logo-website.png" alt="logo" fill />
-          </div>
+          <Link href={"/"}>
+            <div className="relative w-[150px] h-[40px]">
+              <Image src="/images/logo-website.png" alt="logo" fill />
+            </div>
+          </Link>
         </Col>
 
         {/* Desktop Menu */}
@@ -67,11 +62,13 @@ const Header = ({ data }: any) => {
                         setOpenIndex(visible ? index : null)
                       }
                     >
-                      <div
-                        className="text-white text-[18px] cursor-pointer hover:text-[#81C4E8] transition flex items-center gap-1"
-                      >
+                      <div className="text-white text-[18px] cursor-pointer hover:text-[#81C4E8] transition flex items-center gap-1">
                         {item.label}
-                        {openIndex === index ? <UpOutlined /> : <DownOutlined />}
+                        {openIndex === index ? (
+                          <UpOutlined />
+                        ) : (
+                          <DownOutlined />
+                        )}
                       </div>
                     </Dropdown>
                   </Col>

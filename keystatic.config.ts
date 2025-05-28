@@ -1,5 +1,5 @@
 // keystatic.config.ts
-import { config, fields, collection, singleton } from "@keystatic/core";
+import { config, fields, collection, singleton, component } from "@keystatic/core";
 
 export const markdocConfig = fields.markdoc.createMarkdocConfig({});
 
@@ -96,6 +96,23 @@ export default config({
           }), { label: "Services list" })
         }, { label: "Services" })
       },
+    }),
+    aboutus: singleton({
+      label: "About us",
+      path: "src/content/aboutus",
+      format: { data: "json" },
+      schema: {
+        heading: fields.text({ label: "Heading" }),
+        content: fields.blocks({
+          p: {
+            label: "p",
+            schema: fields.object({
+              content : fields.text({ label: "content" }),
+              className: fields.text({ label: "className" })
+            }, { label: "p" }),
+          }
+        }, { label: "blocks" })
+      }
     })
   },
 });

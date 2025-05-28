@@ -1,0 +1,30 @@
+{
+  "heading": "Empowering the future through innovation in semiconductors",
+  "content": [
+    {
+      "discriminant": "p",
+      "value": {
+        "content": "Welcome to Semiwave Technologies, your trusted partner in semiconductor and VLSI solutions. Founded in 2024, we are a dynamic team of innovators dedicated to delivering world-class services that empower businesses to thrive in the ever-evolving technology landscape."
+      }
+    },
+    {
+      "discriminant": "p",
+      "value": {
+        "content": "At Semiwave Technologies, we specialize in providing cutting-edge solutions across the semiconductor value chain, including Frontend RTL Design and Integration, ASIC Verification and Validation, Physical Design and Place & Route (P&R), and Analog and Mixed-Signal Design. Our mission is to help our clients turn their ideas into reality by offering expertise, precision, and reliability in every project we undertake."
+      }
+    },
+    {
+      "discriminant": "p",
+      "value": {
+        "content": "With a commitment to innovation and quality, we strive to push the boundaries of technology, enabling our clients to achieve breakthrough performance and efficiency in their products. Whether you're a startup or an established player, our tailored solutions are designed to meet your unique challenges and drive your success."
+      }
+    },
+    {
+      "discriminant": "p",
+      "value": {
+        "content": "Join us on a journey to shape the future of semiconductors—one wave of innovation at a time.",
+        "className": "text-blue-500 md:text-2xl font-bold text-base"
+      }
+    }
+  ]
+}

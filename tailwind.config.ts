@@ -7,6 +7,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/(site)/**/*.{js,ts,jsx,tsx,mdx}",
   ],
+  safelist: [
+    {
+      pattern: /^text-(\w+)-[1-9]00$/, // matches text-blue-500, text-red-700, etc.
+    },
+  ],
   theme: {
   	extend: {
   	}
