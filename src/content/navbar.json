@@ -15,19 +15,19 @@
       "subMenu": [
         {
           "label": "RTL Engineering",
-          "link": "/"
+          "link": "/service/rtl-engineering"
         },
         {
           "label": "ASIC Engineering",
-          "link": "/"
+          "link": "/service/asic-verification-engineering"
         },
         {
           "label": "Physical design",
-          "link": "/"
+          "link": "/service/physical-design"
         },
         {
           "label": "Analog mixed signal design",
-          "link": "/"
+          "link": "/service/analog-and-mixed-signal-design"
         }
       ]
     },

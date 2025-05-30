@@ -22,6 +22,17 @@ export default config({
         describtion: fields.text({ label: "Describtion" }),
         content: fields.markdoc({ label: "Content" }),
       },
+    }),
+    services: collection({
+      label: "Services",
+      slugField: "title",
+      path: "src/content/services/*",
+      format: { data: "json" },
+      schema: {
+        title: fields.slug({ name: { label: "Title" } }),
+        image: fields.text({ label: "Image" }),
+        content: fields.markdoc({ label: "Content" }) 
+      }
     })
   },
   singletons: {
