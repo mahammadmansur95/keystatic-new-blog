@@ -45,6 +45,7 @@ const Header = ({ data }: any) => {
                         <Link
                           href={sub.link}
                           className="!text-white text-[16px]"
+                          prefetch
                         >
                           {sub.label}
                         </Link>

@@ -19,7 +19,7 @@ const Service = async ({ slug }: any) => {
     }
   } catch (error) {
     console.error("Error fetching service details:", error);
-    notFound(); // Optional: also redirect on fetch error
+    notFound(); 
   }
 
   const { node } = serviceDetails.content;
