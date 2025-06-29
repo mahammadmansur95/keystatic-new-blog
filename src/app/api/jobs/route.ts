@@ -1,3 +1,5 @@
+export const runtime = 'nodejs';
+
 import { reader } from "@/app/reader";
 import Markdoc from "@markdoc/markdoc";
 import { NextResponse } from "next/server";
