@@ -10,10 +10,20 @@ import { Button, Col, Drawer, Dropdown, Menu, Row } from "antd";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useState } from "react";
+import ContactUsModal from "./ContactUs";
 
 const Header = ({ data }: any) => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const [open, setOpen] = useState(false);
+
+  const showModal = () => {
+    setOpen(true);
+  };
+
+  const handleCancel = () => {
+    setOpen(false);
+  };
 
   const handleDropdownToggle = (index: number) => {
     setOpenIndex((prev) => (prev === index ? null : index));
@@ -91,7 +101,11 @@ const Header = ({ data }: any) => {
 
         {/* Desktop Contact */}
         <Col className="hidden md:block">
-          <Button type="primary" className="!bg-[#81C4E8] !text-black !py-5">
+          <Button
+            type="primary"
+            className="!bg-[#81C4E8] !text-black !py-5"
+            onClick={showModal}
+          >
             Contact us
           </Button>
         </Col>
@@ -168,12 +182,16 @@ const Header = ({ data }: any) => {
           <Button
             type="primary"
             className="!bg-[#81C4E8] !text-black mt-4"
-            onClick={() => setDrawerVisible(false)}
+            onClick={() => {
+              setDrawerVisible(false);
+              showModal();
+            }}
           >
             Contact us
           </Button>
         </div>
       </Drawer>
+      <ContactUsModal visible={open} onClose={handleCancel} />
     </div>
   );
 };

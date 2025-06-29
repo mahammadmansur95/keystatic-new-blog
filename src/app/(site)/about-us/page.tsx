@@ -48,7 +48,7 @@ const Aboutus = async () => {
         <div className="absolute inset-0 z-0 bg-[linear-gradient(236.22deg,_#1D3D8D_1.39%,_#14244C_90.45%)]" />
 
         {/* Right-side background image */}
-        <div className="absolute right-0 top-0 h-full w-1/2 z-10 opacity-40">
+        <div className="absolute right-0 top-0 h-full md:w-1/2 w-full z-10">
           <Image
             src="/images/about_us_bg.png"
             alt="about us bg image"
@@ -71,12 +71,10 @@ const Aboutus = async () => {
             alt="about us content background"
             fill
             className="object-cover object-center"
-            priority
           />
         </div>
 
-        {/* Optional overlay if text is hard to read */}
-        <div className="absolute inset-0 bg-white/80 dark:bg-black/50 z-10" />
+        {/* <div className="absolute inset-0 bg-white/80 dark:bg-black/50 z-10" /> */}
 
         {/* Content */}
         <div className="relative z-20 max-w-3xl text-center mx-auto">

@@ -11,6 +11,9 @@ const config: Config = {
     {
       pattern: /^text-(\w+)-[1-9]00$/, // matches text-blue-500, text-red-700, etc.
     },
+    {
+      pattern: /^opacity-(\d{2,3})$/,
+    }
   ],
   theme: {
   	extend: {
