@@ -1,12 +1,17 @@
-export const runtime = 'nodejs';
-
-import { reader } from "@/app/reader";
+// import { reader } from "@/app/reader";
+import { fields } from "@keystatic/core";
 import Markdoc from "@markdoc/markdoc";
 import { NextResponse } from "next/server";
-import { markdocConfig } from "../../../../keystatic.config";
+
+import { createReader } from '@keystatic/core/reader';
+import keystaticConfig from "../../../../keystatic.config";
+
+const reader = createReader(process.cwd(), keystaticConfig);
+
 
 export async function GET(req: Request) {
   const { searchParams } = new URL(req.url);
+  const markdocConfig = fields.markdoc.createMarkdocConfig({});
 
   const page = parseInt(searchParams.get("page") || "1", 10);
   const pageSize = parseInt(searchParams.get("pageSize") || "5", 10);
