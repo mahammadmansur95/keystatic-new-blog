@@ -13,12 +13,15 @@ export async function GET(req: Request) {
   const search = searchParams.get("search")?.toLowerCase() || "";
 
   const slugs = await reader.collections.jobs.list();
+  console.log("slugs", slugs);
 
   const jobs = await Promise.all(
     slugs.map(async (slug) => {
       const entry : any = await reader.collections.jobs.read(slug, {
         resolveLinkedFiles: true,
       });
+
+      console.log(`entry ${slug}`, JSON.stringify(entry));
 
       const { node } = entry.description;
       const renderable = Markdoc.transform(node, markdocConfig);
